@@ -1,7 +1,12 @@
 <?php
-$conn = new mysqli("localhost","root","","mediassist_db");
+$servername = "localhost";
+$username = "root";
+$password = ""; // your MySQL password
+$dbname = "mediassist_db";
 
-if($conn->connect_error){
-    die("Connection failed");
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 ?>
